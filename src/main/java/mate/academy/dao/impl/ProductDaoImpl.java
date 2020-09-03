@@ -29,7 +29,7 @@ public class ProductDaoImpl implements ProductDao {
         IntStream.range(0, Storage.products.size())
                 .filter(product -> Storage.products.get(product).getId().equals(productUpdate.getId()))
                 .forEach(product -> Storage.products.set(product, productUpdate));
-        return product;
+        return productUpdate;
     }
 
     @Override
